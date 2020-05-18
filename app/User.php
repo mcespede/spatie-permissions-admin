@@ -5,11 +5,15 @@ namespace App;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
+
+//Esto es para poder utilizar Spatie sistema de roles
+//This package allows for users to be associated with permissions and roles
 use Spatie\Permission\Traits\HasRoles;
 
 class User extends Authenticatable
 {
     use Notifiable;
+    //Utilizamos el objeto de roles en Spatie
     use HasRoles;
 
     /**
